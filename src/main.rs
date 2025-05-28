@@ -33,9 +33,9 @@ fn main() {
 		exit(1);
 	} else {
 		if args[1] == "-d" {
-			decrypt(args[2]);
+			decrypt(&args[2]);
 		} else if args[1] == "-e" {
-			encrypt(args[2]);
+			encrypt(&args[2]);
 		}
 	}
 }
