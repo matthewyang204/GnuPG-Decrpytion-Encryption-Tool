@@ -32,9 +32,15 @@ fn help() {
 fn main() {
 	let args = getArgs();
 	
-	if args.len() != 3 {
-		help();
-		exit(1);
+	if args.len() == 3 {
+        if args[1] == "-d" {
+            decrypt(&args[2]);
+        } else if args[1] == "-e" {
+            encrypt(&args[2]);
+        } else {
+            help();
+            exit(1);
+        }
 	} else if args.len() == 2 {
         if args[1] == "-v" || args[1] == "--version" {
             version();
@@ -42,13 +48,7 @@ fn main() {
             help();
         }
     } else {
-		if args[1] == "-d" {
-			decrypt(&args[2]);
-		} else if args[1] == "-e" {
-			encrypt(&args[2]);
-		} else {
-            help();
-            exit(1);
-        }
+		help();
+        exit(1);
 	}
 }
