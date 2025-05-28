@@ -23,6 +23,10 @@ fn main() {
 		help();
 		exit(1);
 	} else {
-		todo!("Not implemented yet!");
+		if arg[1] == '-d' {
+			todo!("Decryption not implemented yet");
+		} else if arg[1] == '-e' {
+			todo!("Encryption not implemented yet");
+		}
 	}
 }
