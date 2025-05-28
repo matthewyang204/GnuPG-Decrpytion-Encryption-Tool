@@ -3,3 +3,6 @@
 
 # src contains only rust code
 src/* linguist-language=Rust
+
+# Ignore the Makefile
+Makefile linguist-vendored
