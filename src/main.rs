@@ -7,6 +7,9 @@ fn getArgs() -> Vec<String> {
 }
 
 fn help() {
+	println!("GnuPG Decryption and Encryption Tool, version 1.0.0");
+	println!("(C) 2025 Matthew Yang");
+	println!("");
 	println!("Usage: gpgde -d|-e filename");
 	println!("-d, --decrypt     Decrypt file specified");
 	println!("-e, --encrypt     Encrypt file specified");
