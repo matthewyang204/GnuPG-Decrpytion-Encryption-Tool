@@ -6,7 +6,9 @@ endif
 RC = rustc
 RFLAGS = -C opt-level=3
 BIN = bin/gpgde
+BINDIR = bin
 SRC = src/main.rs
+PREFIX ?= /usr/local
 
 all: build
 
@@ -17,4 +19,9 @@ build: $(SRC) src/decrypter.rs src/encrypter.rs
 clean:
 	rm -f $(BIN)
 	
-.PHONY: all build clean
+install:
+	mkdir -p $(PREFIX)/$(BINDIR)
+	rm -rf $(PREFIX)/$(BIN)
+	cp $(BIN) $(PREFIX)/$(BIN)
+
+.PHONY: all build clean install
