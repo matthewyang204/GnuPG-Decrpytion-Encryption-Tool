@@ -23,7 +23,6 @@ fn main() {
 		help();
 		exit(1);
 	} else {
-		println!("Not implemented yet!");
-		exit(0);
+		todo!("Not implemented yet!");
 	}
 }
