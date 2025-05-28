@@ -22,5 +22,8 @@ fn main() {
 	if args.len() != 2 {
 		help();
 		exit(1);
+	} else {
+		println!("Not implemented yet!");
+		exit(0);
 	}
 }
