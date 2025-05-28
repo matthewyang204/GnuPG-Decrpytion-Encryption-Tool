@@ -33,9 +33,9 @@ fn main() {
 		exit(1);
 	} else {
 		if args[1] == "-d" {
-			todo!("Decryption not implemented yet");
+			decrypter(args[2]);
 		} else if args[1] == "-e" {
-			todo!("Encryption not implemented yet");
+			encrypter(args[2]);
 		}
 	}
 }
