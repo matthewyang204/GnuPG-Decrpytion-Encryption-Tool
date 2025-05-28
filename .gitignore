@@ -9,3 +9,6 @@
 
 # Configure files
 .configured
+
+# Build junk
+bin/
