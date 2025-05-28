@@ -11,6 +11,7 @@ SRC = src/main.rs
 all: build
 
 build: $(SRC) src/decrypter.rs src/encrypter.rs
+	mkdir -p bin
 	$(RC) $(RFLAGS) $(SRC) -o $(BIN)
 	
 clean:
