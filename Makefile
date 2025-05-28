@@ -23,5 +23,8 @@ install:
 	mkdir -p $(PREFIX)/$(BINDIR)
 	rm -rf $(PREFIX)/$(BIN)
 	cp $(BIN) $(PREFIX)/$(BIN)
+	
+uninstall:
+	rm -rf $(PREFIX)/$(BIN)
 
-.PHONY: all build clean install
+.PHONY: all build clean install uninstall
