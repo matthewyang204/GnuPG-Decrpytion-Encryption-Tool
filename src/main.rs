@@ -36,6 +36,8 @@ fn main() {
 			decrypt(&args[2]);
 		} else if args[1] == "-e" {
 			encrypt(&args[2]);
-		}
+		} else {
+            help();
+        }
 	}
 }
