@@ -13,7 +13,6 @@ fn strip_gpg_extension(filename: &str) -> String {
 
 pub fn decrypt(file: &str) {
     let stripped_file = strip_gpg_extension(file);
-    println!("Not implemented yet, but got file {}, and the stripped filename is {}", file, stripped_file);
 	
     Command::new("gpg")
     	    .arg("-o")
