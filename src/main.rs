@@ -15,9 +15,13 @@ fn getArgs() -> Vec<String> {
 	return args;
 }
 
+fn version() {
+    println!("GnuPG Decryption and Encryption Tool, version 1.0.1");
+    println!("(C) 2025 Matthew Yang");
+}
+
 fn help() {
-	println!("GnuPG Decryption and Encryption Tool, version 1.0.0");
-	println!("(C) 2025 Matthew Yang");
+    version();
 	println!("");
 	println!("Usage: gpgde -d|-e filename");
 	println!("-d, --decrypt     Decrypt file specified");
@@ -31,13 +35,20 @@ fn main() {
 	if args.len() != 3 {
 		help();
 		exit(1);
-	} else {
+	} else if args.len() == 2 {
+        if args[1] == "-v" || args[1] == "--version" {
+            version();
+        } else if args[1] == "-h" || args[1] == "--help"{
+            help();
+        }
+    } else {
 		if args[1] == "-d" {
 			decrypt(&args[2]);
 		} else if args[1] == "-e" {
 			encrypt(&args[2]);
 		} else {
             help();
+            exit(1);
         }
 	}
 }
