@@ -17,7 +17,7 @@ build: $(SRC) src/decrypter.rs src/encrypter.rs
 	$(RC) $(RFLAGS) $(SRC) -o $(BIN)
 	
 clean:
-	rm -f $(BINDIR)
+	rm -rf $(BINDIR)
 	
 install:
 	mkdir -p $(PREFIX)/$(BINDIR)
