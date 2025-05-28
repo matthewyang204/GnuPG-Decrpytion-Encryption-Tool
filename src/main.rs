@@ -46,6 +46,9 @@ fn main() {
             version();
         } else if args[1] == "-h" || args[1] == "--help"{
             help();
+        } else {
+            help();
+            exit(1);
         }
     } else {
 		help();
