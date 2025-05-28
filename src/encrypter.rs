@@ -1,3 +1,9 @@
+use std::process::Command;
+
 pub fn encrypt(file: &str) {
-	println!("Not implemented yet, but got file {}", file);
+    Command::new("gpg")
+	    .arg("-c")
+	    .arg(file)
+	    .status()
+	    .expect("Failed to encrypt file");
 }
