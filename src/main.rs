@@ -1,5 +1,14 @@
+// Regular imports
 use std::env;
 use std::process::exit;
+
+// Load decryption and encryption modules
+mod encrypter;
+mod decrypter;
+
+// Use functions from loaded modules
+use encrypter::encrypt;
+use decrypter::decrypt;
 
 fn getArgs() -> Vec<String> {
 	let args: Vec<String> = env::args().collect();
