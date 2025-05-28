@@ -5,7 +5,7 @@ endif
 
 RC = rustc
 RFLAGS = -C opt-level=3
-BIN = gpgde
+BIN = bin/gpgde
 SRC = src/main.rs
 
 all: build
