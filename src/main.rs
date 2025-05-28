@@ -2,7 +2,7 @@ use std::env;
 
 fn getArgs() {
 	let args: Vec<String> = env::args().collect();
-	return args
+	return args;
 }
 
 fn help() {
@@ -10,5 +10,5 @@ fn help() {
 }
 
 fn main() {
-	
+	let args = getAgs();
 }
