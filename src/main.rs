@@ -1,7 +1,7 @@
 use std::env;
 use std::process::exit;
 
-fn getArgs() {
+fn getArgs() -> Vec<String> {
 	let args: Vec<String> = env::args().collect();
 	return args;
 }
@@ -14,7 +14,7 @@ fn help() {
 }
 
 fn main() {
-	let args = getAgs();
+	let args = getArgs();
 	
 	if args.len() != 2 {
 		help();
