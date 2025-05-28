@@ -1,4 +1,5 @@
 use std::path::{Path, PathBuf};
+use std::process::Command;
 
 fn strip_gpg_extension(filename: &str) -> String {
     let path = Path::new(filename);
@@ -12,5 +13,13 @@ fn strip_gpg_extension(filename: &str) -> String {
 
 pub fn decrypt(file: &str) {
     let stripped_file = strip_gpg_extension(file);
-	println!("Not implemented yet, but got file {}, and the stripped filename is {}", file, stripped_file);
+    println!("Not implemented yet, but got file {}, and the stripped filename is {}", file, stripped_file);
+	
+    Command::new("gpg")
+    	    .arg("-o")
+    	    .arg(stripped_file)
+    	    .arg("-d")
+    	    .arg(file)
+    	    .status()
+    	    .expect("Failed to encrypt file");
 }
