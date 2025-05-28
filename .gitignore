@@ -12,3 +12,6 @@
 
 # Build junk
 bin/
+
+# JetBrains annoyances
+.idea
