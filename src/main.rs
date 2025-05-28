@@ -28,7 +28,7 @@ fn help() {
 fn main() {
 	let args = getArgs();
 	
-	if args.len() != 2 {
+	if args.len() != 3 {
 		help();
 		exit(1);
 	} else {
