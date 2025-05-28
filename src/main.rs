@@ -32,9 +32,9 @@ fn main() {
 		help();
 		exit(1);
 	} else {
-		if args[1] == '-d' {
+		if args[1] == "-d" {
 			todo!("Decryption not implemented yet");
-		} else if args[1] == '-e' {
+		} else if args[1] == "-e" {
 			todo!("Encryption not implemented yet");
 		}
 	}
