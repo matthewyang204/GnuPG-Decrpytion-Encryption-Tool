@@ -38,9 +38,9 @@ fn main() {
 	let args = getArgs();
 	
 	if args.len() == 3 {
-        if args[1] == "-d" {
+        if args[1] == "-d" || args[1] == "--decrypt" {
             decrypt(&args[2]);
-        } else if args[1] == "-e" {
+        } else if args[1] == "-e" || args[1] == "--encrypt" {
             encrypt(&args[2]);
         } else {
             help();
