@@ -29,6 +29,11 @@ fn help() {
 	println!("filename          Name of file");
 }
 
+fn userError() {
+    println!("Error: need two args, one with action option -d or -e, and the second is the path to a file");
+    exit(1);
+}
+
 fn main() {
 	let args = getArgs();
 	
@@ -39,7 +44,7 @@ fn main() {
             encrypt(&args[2]);
         } else {
             help();
-            exit(1);
+            userError();
         }
 	} else if args.len() == 2 {
         if args[1] == "-v" || args[1] == "--version" {
@@ -48,10 +53,10 @@ fn main() {
             help();
         } else {
             help();
-            exit(1);
+            userError();
         }
     } else {
 		help();
-        exit(1);
+        userError();
 	}
 }
