@@ -20,4 +20,4 @@ GnuPG Decryption and Encryption Tool is a simple wrapper around GnuPG to make it
 ./configure
 make -j$(nproc)
 ```
-3. Install with `make install` to install to the default prefix of `/usr/local`. Alternatively, you can install to a specific prefix by running `make install PREFIX={yourprefix}` where {yourprefix} is your custom prefix. Use sudo when needed.
+3. Install with `make install` to install to the default prefix of `/usr/local`. Alternatively, you can install to a specific prefix by running `make install PREFIX={yourprefix}` where {yourprefix} is your custom prefix. Use `sudo` when needed.
