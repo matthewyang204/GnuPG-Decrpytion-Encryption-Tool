@@ -16,8 +16,8 @@ fn getArgs() -> Vec<String> {
 }
 
 fn version() {
-    println!("GnuPG Decryption and Encryption Tool, version 1.0.1");
-    println!("(C) 2025 Matthew Yang");
+	println!("GnuPG Decryption and Encryption Tool, version 1.0.1");
+	println!("(C) 2025 Matthew Yang");
 }
 
 fn help() {
